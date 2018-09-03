@@ -1,0 +1,37 @@
+﻿<Project>
+
+  <!-- Company/Copyright -->
+  <PropertyGroup>
+    <Company>TagBites sp. z o.o.</Company>
+    <Authors>TagBites sp. z o.o.</Authors>
+    <Copyright>TagBites sp. z o.o. © 2012-2018</Copyright>
+  </PropertyGroup>
+
+  <!-- Bin/Obj directories -->
+  <PropertyGroup>
+    <BaseOutputPath>$(SolutionDir)bin\</BaseOutputPath>
+    <BaseIntermediateOutputPath>$(SolutionDir)bin\obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+
+  <!-- Compilation settings -->
+  <PropertyGroup>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <LangVersion>latest</LangVersion>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+
+  <!-- Globalziation -->
+  <PropertyGroup>
+    <NeutralLanguage>en-US</NeutralLanguage>
+  </PropertyGroup>
+
+  <!-- Ignored files/folders -->
+  <PropertyGroup>
+    <DefaultItemExcludes>$(DefaultItemExcludes);*.csproj.DotSettings</DefaultItemExcludes>
+  </PropertyGroup>
+
+  <!-- Includes -->
+  <Import Condition="exists('Version.props')" Project="Version.props" />
+  <Import Condition="exists('Licensing.props')" Project="Licensing.props" /> 
+
+</Project>

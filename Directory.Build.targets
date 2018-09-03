@@ -1,0 +1,12 @@
+<Project>
+
+  <!-- Copy package to local packages repository -->
+  <Target Name="CopyPackage" AfterTargets="Pack" Condition="exists('$(SolutionDir)..\LocalPackages\')">
+    <Message Text="Copy '$(PackageOutputPath)$(PackageId).$(PackageVersion).nupkg' to '$(SolutionDir)..\LocalPackages\'" Importance="high"/>
+    <Copy 
+      SourceFiles="$(PackageOutputPath)$(PackageId).$(PackageVersion).nupkg"
+      DestinationFolder="$(SolutionDir)..\LocalPackages\" 
+      ContinueOnError="false" /> 
+  </Target>
+
+</Project>

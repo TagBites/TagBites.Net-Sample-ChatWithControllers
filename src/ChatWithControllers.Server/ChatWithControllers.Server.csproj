@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>NET462</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ChatWithControllers.Core\ChatWithControllers.Core.csproj" />
+    <PackageReference Include="TagBites.Net" Version="1.0.0-beta1" />
+  </ItemGroup>
+
+</Project>
