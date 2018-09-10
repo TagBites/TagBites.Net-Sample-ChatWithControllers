@@ -2,9 +2,9 @@
 
   <!-- Company/Copyright -->
   <PropertyGroup>
-    <Company>TagBites sp. z o.o.</Company>
-    <Authors>TagBites sp. z o.o.</Authors>
-    <Copyright>TagBites sp. z o.o. © 2012-2018</Copyright>
+    <Company>Tag Bites sp. z o.o.</Company>
+    <Authors>Tag Bites sp. z o.o.</Authors>
+    <Copyright>Tag Bites sp. z o.o. © 2012-2018</Copyright>
   </PropertyGroup>
 
   <!-- Bin/Obj directories -->
