@@ -2,19 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using TagBites.Net;
 
-namespace ChatWithControllers.Client
+namespace ChatWithControllers.ClientApp
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var client = new TagBites.Net.Client("127.0.0.1", 82);
-            client.ControllerResolve += (s, e) =>
-            {
-                if (e.ControllerType == typeof(IChatClient))
-                    e.Controller = new ChatClient();
-            };
+            var client = new Client("127.0.0.1", 82);
+            client.Use<IChatClient, ChatClient>();
             client.ConnectAsync().Wait();
 
             while (true)

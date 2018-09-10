@@ -6,7 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using TagBites.Net;
 
-namespace ChatWithControllers.Server
+namespace ChatWithControllers.ServerApp
 {
     class Program
     {
@@ -14,12 +14,8 @@ namespace ChatWithControllers.Server
         {
             var nextUserId = 0;
 
-            var server = new TagBites.Net.Server("127.0.0.1", 82);
-            server.ControllerResolve += (s, e) =>
-            {
-                if (e.ControllerType == typeof(IChatServer))
-                    e.Controller = new ChatServer() { Server = server, Client = e.Client };
-            };
+            var server = new Server("127.0.0.1", 82);
+            server.Use<IChatServer, ChatServer>(client => new ChatServer() { Client = client, Server = server });
             server.ClientAuthenticate += (s, e) =>
             {
                 e.Identity = Interlocked.Increment(ref nextUserId);
@@ -47,7 +43,7 @@ namespace ChatWithControllers.Server
 
     public class ChatServer : IChatServer
     {
-        public TagBites.Net.Server Server { get; set; }
+        public Server Server { get; set; }
         public ServerClient Client { get; set; }
 
         public async void Send(string message)

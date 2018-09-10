@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatWithControllers.Client", "src\ChatWithControllers.Client\ChatWithControllers.Client.csproj", "{58B7DD5F-5DE1-43C3-B474-28A2931DEDBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatWithControllers.ClientApp", "src\ChatWithControllers.ClientApp\ChatWithControllers.ClientApp.csproj", "{58B7DD5F-5DE1-43C3-B474-28A2931DEDBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatWithControllers.Core", "src\ChatWithControllers.Core\ChatWithControllers.Core.csproj", "{CA04A227-178B-43F0-BC9F-1B4E96DC6F71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatWithControllers.Core", "src\ChatWithControllers.Core\ChatWithControllers.Core.csproj", "{CA04A227-178B-43F0-BC9F-1B4E96DC6F71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatWithControllers.Server", "src\ChatWithControllers.Server\ChatWithControllers.Server.csproj", "{295743DE-71BA-4033-A730-E67541B4B961}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatWithControllers.ServerApp", "src\ChatWithControllers.ServerApp\ChatWithControllers.ServerApp.csproj", "{295743DE-71BA-4033-A730-E67541B4B961}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
