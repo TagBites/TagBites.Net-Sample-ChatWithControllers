@@ -5,4 +5,8 @@
     <RootNamespace>ChatWithControllers</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="TagBites.Net" Version="1.0.0-beta4" />
+  </ItemGroup>
+
 </Project>
